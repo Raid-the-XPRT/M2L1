@@ -7,18 +7,16 @@ int main(){
 	printf("Enter an Integer number N larger than or equal to one: \n");
 	scanf("%d",&intN);
 
-	printf("The prime numbers from 1 to N are: ");
-
 	for(int i=1;i<=intN;i++){
-		for(int j=1;j<=i;j++){
-			if(i%j==0){
-				intDivisionsCounts++;
-			}
-		}
-
-	if(intDivisionsCounts==2){
-		printf("%d, ",i);
+		if(intN%i==0){
+			intDivisionsCounts++;
 	}
+	}
+	if(intDivisionsCounts==2){
+		printf("%d is a prime number\n",intN);
+	}
+	else{
+		printf("%d is not a prime number\n",intN);
 
 	intDivisionsCounts=0;
 	}
